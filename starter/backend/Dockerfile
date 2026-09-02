@@ -5,8 +5,6 @@ WORKDIR /
 RUN useradd -u 1000 -m app
 RUN apt-get update && \
   apt-get install -y \
-  libpcre3 \
-  libpcre3-dev \
   build-essential \
   libffi-dev \
   openssl \
