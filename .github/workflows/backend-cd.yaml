@@ -88,7 +88,7 @@ jobs:
           kustomize edit set image backend=$ECR_REPOSITORY:${{ github.sha }}
           kustomize build | kubectl apply -f -
           
-        - name: Verify Kubernetes deployment
+      - name: Verify Kubernetes deployment
         run: |
             kubectl rollout status deployment/backend --timeout=180s || true
             echo "----- Logging - kubectl get all ---- "
